@@ -1,6 +1,8 @@
-h1{
-    color: red;
-    span{
-        background-color: #000;
-    }
-}
+@import 'layout/grid.scss',
+        'layout/components/ads.scss',
+        'layout/components/nav.scss',
+        'layout/components/header.scss',
+        'layout/components/mainMain.scss',
+        'layout/components/footer.scss',
+        'common/root.scss',
+        'common/common.scss'

@@ -18,8 +18,10 @@
     "gulp-babel": "^8.0.0",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-load-plugins": "^2.0.7",
-    "gulp-sass": "^5.1.0",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-ttf2woff2": "^4.0.1",
     "node-sass": "^7.0.1"
   },
   "dependencies": {

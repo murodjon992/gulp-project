@@ -1,0 +1,70 @@
+$lg: 1140px;
+$md: 992px;
+$sm: 768px;
+$xs: 576px;
+
+$guttters: 30px;
+$gutter-side: $guttters / 2;
+$column: 12;
+
+@mixin container($padding: $gutter-side){
+    max-width: $lg;
+    margin: 0 auto;
+    padding: 0 $padding;
+    width: 100%;
+
+    @include media($lg){
+        max-width: $md;
+    }
+    @include media($md){
+        max-width: $sm;
+    }
+    @include media($sm){
+        max-width: $xs;
+    }
+    @include media($xs){
+        max-width: 100%;
+    }
+}
+@mixin media($size: $lg){
+    @media(max-width: $size){
+        @content;
+    }
+}
+@mixin row($margin: $gutter-side){
+    display: flex;
+    flex-wrap: wrap;
+    @if $margin != 0 {
+    margin: 0 -$margin;
+    }
+}
+@mixin col-base($padding: $gutter-side){
+    padding-left: $padding;
+    padding-right: $padding;
+}
+
+@mixin col($col-n: 12, $padding: $gutter-side){
+    width: 100% / $column * $col-n;
+    @include col-base($padding);
+}
+
+@mixin col-xs($col-n, $padding: $gutter-side){
+    @include media($xs){
+        @include col($col-n,$padding )
+    }
+}
+@mixin col-sm($col-n, $padding: $gutter-side){
+    @include media($sm){
+        @include col($col-n,$padding )
+    }
+}
+@mixin col-md($col-n, $padding: $gutter-side){
+    @include media($md){
+        @include col($col-n,$padding )
+    }
+}
+@mixin col-lg($col-n, $padding: $gutter-side){
+    @include media($lg){
+        @include col($col-n,$padding )
+    }
+}

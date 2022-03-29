@@ -1,0 +1,42 @@
+$Montserrat: ('Regular', 400),
+             ('Bold', 700);
+@each $name, $weight in $Montserrat {
+    @font-face {
+        font-family: 'Montserrat';
+        src: url(../fonts/Montserrat/Montserrat-#{$name}.woff2);
+        font-weight: $weight;
+    }
+}
+
+$Comfortaa: ('Regular', 400),
+             ('Bold', 700);
+@each $name, $weight in $Comfortaa {
+    @font-face {
+        font-family: 'Comfortaa';
+        src: url(../fonts/Comfortaa/Comfortaa-#{$name}.woff2);
+        font-weight: $weight;
+    }
+}
+
+$Roboto: ('Regular', 400),
+            ('Medium', 500);
+@each $name, $weight in $Roboto {
+    @font-face {
+        font-family: 'Roboto';
+        src: url(../fonts/Roboto/Roboto-#{$name}.woff2);
+        font-weight: $weight;
+    }
+}
+
+$FontAwesome: ('brands', 401),
+              ('duotone', 901),
+              ('light', 300),
+              ('regular', 400),
+              ('solid', 900);
+@each $name, $weight in $FontAwesome {
+    @font-face {
+        font-family: 'FontAwesome';
+        src: url(../fonts/FontAwesome/fa-#{$name}-#{$weight}.woff2);
+        font-weight: $weight;
+    }
+}

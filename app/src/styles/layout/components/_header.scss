@@ -1,0 +1,29 @@
+.header{
+    background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('../img/kong_skull_island\ 1.jpg')no-repeat center / cover;
+    height: 640px;
+    display: flex;
+    align-items: center;
+    &__title{
+        color: #fff;
+        font-weight: 700;
+        font-family: 'Montserrat';
+        line-height: 78px;
+        font-size: 64px;
+        @media (max-width: 770px){
+            font-size: 45px;
+        }
+    }
+    &__text{
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: justify;
+        color: #c8c8c8;
+        max-width: 573px;
+        padding: 30px 0 48px;
+    }
+    &__btn{
+        margin-right: 30px;
+    }
+}

@@ -1,0 +1,50 @@
+-var cards = {1:{img: './img/Black_Panther.jpg', time: '2:14:33', title: 'Black Panther'}, 2:{img: './img/batman.jpg', time: '2:32:13', title: 'The Dark Knight'},3:{img: './img/gentlemen.jpg', time: '1:53:45', title: 'The Gentlemen'},4:{img: './img/hobbit.jpg', time: '2:58:20', title: 'The King of Rings'}}
+-var card = {1: {img: './img/col1.jpg', title: 'All Marvel Films'},2: {img: './img/col2.jpg', title: 'Fast and the Furious'},3: {img: './img/col3.jpg', title: 'Star Wars'}}
+-var series = {1: {img: './img/grid1.png', text:'The time of prosperity is drawing to a close, and the summer, which lasted almost a decade, is dying away. Around the center of power of the Seven Kingdoms, the Iron Throne, a conspiracy is ripening, and during this difficult time, the king decides to seek support from his youth friend Eddard Stark. In a world where everyone - from the king to the mercenary - is eager for power, intrigues and is ready to stick a knife in the back, there is ...', title: 'Game of thrones'}, 2: {img: './img/grid2.png', title: 'Wanda Vision'},3: {img: './img/grid3.png', title: 'The Fresh'},4: {img: './img/grid4.png', title: 'The Great'},5: {img: './img/grid5.png', title: 'Gotham'},6: {img: './img/grid6.png', title: 'The Witcher'},}
+main.main 
+  .films 
+    .container 
+       h2.title Films 
+       .films__content 
+        .row
+          each obj in cards
+           .films__content-card 
+            .films__relative        
+               img(src= obj.img, alt="")
+               .films__card-inner
+                  span.icon-play
+                  span.films__time= obj.time
+                  h3.films__title= obj.title
+                  p.films__text At first glance, you can decide that Wakanda is an ordinary territory   of wild Africa, but this is not so. Here, in the bowels of the desert lands, there   are hidden deposits of a unique metal capable of absorbing...
+  .trailers 
+    video(src="./video/idow.mp4").trailers__video
+    .trailers__info 
+      .container
+       img(src="./img/301.png", alt="")
+       p.trailers__info-text After the events at the Leipzig-Halle airport, Natasha was overtaken by the mistakes of the past. The Red Room again made itself felt - a program to create Widows - professional killers and spies - just like her. Natasha decides once and for all to deal with people whose efforts she herself became a Widow.
+       a(href="#!").btn.trailers__btn Watch Now 
+  .collections
+    .container 
+      h2.title Collections
+      .collections_inner
+       .row
+        each collec in card 
+          .collections_inner-card 
+            .collections_relative 
+              img(src= collec.img, alt="")
+              .collections_card 
+                span.icon-play 
+                h2.collections_title= collec.title 
+  .series 
+    .container 
+        h2.title Series 
+        .series_inner 
+          each el in series
+           .series_item
+              img(src= el.img, alt="")
+              .series_item-inner
+                span.icon-play
+                h2.series_item-title= el.title
+                p.series_item-text= el.text
+                a.btn.series_btn Watch now
+

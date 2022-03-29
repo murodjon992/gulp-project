@@ -1,0 +1,10 @@
+nav.nav 
+   .container
+      .nav__inner 
+        a(href="").logo
+             img(src="./img/209-2093453_vue-cinema-logo-vue-cinemas 1.png", alt="")
+             | CINEMAS
+        ul.nav__menu 
+         each val in ['Films', 'Serials', 'Cartoons', 'Collections']
+           li 
+             a.nav__menu-link(href="")= val
